@@ -21,7 +21,7 @@ hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7
 
 # Fretboard area (virtual box on screen)
 fretboard_x1, fretboard_y1 = 100, 100
-fretboard_x2, fretboard_y2 = 400, 350
+fretboard_x2, fretboard_y2 = 500, 350
 num_strings = 6
 num_frets = 4
 
@@ -47,7 +47,7 @@ while cap.isOpened():
     if not ret:
         break
 
-    frame = cv2.flip(frame, 1)
+    
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     result = hands.process(rgb)
 
